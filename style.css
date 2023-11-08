@@ -26,7 +26,7 @@ body {
 .swiper {
   min-width: 100%;
   min-height: 100%;
-}
+} 
 
 .swiper-slide {
   text-align: center;
@@ -73,7 +73,7 @@ body {
 footer {
   background-color: black;
   color: #949494;
-  font-size: 12px;
+  font-size: 0.6rem;
 }
 
 .footer-title {
@@ -89,8 +89,8 @@ footer {
 }
 
 .footer-list {
+  padding: 0;
   list-style: none;
-
 }
 
 .list-item {
@@ -99,6 +99,6 @@ footer {
 
 .erip img {
   width: 100%;
-  height: 48px;
+  height: 32px;
   object-fit: contain;
 }
