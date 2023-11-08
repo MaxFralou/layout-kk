@@ -1,0 +1,104 @@
+@import url('./assets/css/normalize.css');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color: #333;
+}
+
+:root {
+  --swiper-theme-color: #b9b9b9;
+}
+
+.swiper {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-btn {
+  position: fixed;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.swiper-btn:hover {
+ opacity: 1;
+}
+
+.category {
+  display: flex;
+  margin: 22px 0 22px 0;
+  gap: 14px;
+}
+
+.category-2 {
+  display: flex;
+}
+
+footer {
+  background-color: black;
+  color: #949494;
+  font-size: 12px;
+}
+
+.footer-title {
+  color: #cccccc;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-list {
+  list-style: none;
+
+}
+
+.list-item {
+  margin: 12px;
+}
+
+.erip img {
+  width: 100%;
+  height: 48px;
+  object-fit: contain;
+}
