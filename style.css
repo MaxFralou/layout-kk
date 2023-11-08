@@ -23,10 +23,135 @@ body {
   --swiper-theme-color: #b9b9b9;
 }
 
+header {
+  align-items: center;
+  position: fixed;
+  top: 22px;
+  left: 32px;
+  right: 32px;
+  z-index: 1000;
+  min-height: 50px;
+}
+
+.toollbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-part {
+  display: flex;
+  align-items: center
+}
+
+/* BURGER */
+
+.menu {
+  padding-bottom: 18px;
+}
+
+.burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.burger {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  background: transparent;
+  width: 28px;
+  height: 24px;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  background: #333;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #333;
+  transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+
+.burger::after {
+  bottom: 0;
+  transition: bottom .3s .15s, transform .3s;
+}
+
+.burger-checkbox:checked+.burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+
+.burger-checkbox:checked+.burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom .3s, transform .3s .15s;
+}
+
+.menu-list {
+  top: -38px;
+  left: -32px;
+  position: absolute;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  padding: 0 32px 32px;
+  background: #fff;
+  list-style-type: none;
+  transform: translateX(-100%);
+  transition: .3s;
+  width: 20vw;
+  height: 100vh;
+}
+
+.menu-item {
+  display: block;
+  padding: 2px;
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, .2)
+}
+
+.burger-checkbox:checked~.menu-list {
+  transform: translateX(0);
+}
+
+/* BURGER */
+
+.logo {
+  z-index: 2;
+}
+
+.logo img {
+  margin: 0 0 0 22px;
+  max-width: 80px;
+  object-fit: contain;
+}
+
 .swiper {
   min-width: 100%;
   min-height: 100%;
-} 
+}
 
 .swiper-slide {
   text-align: center;
@@ -57,7 +182,7 @@ body {
 }
 
 .swiper-btn:hover {
- opacity: 1;
+  opacity: 1;
 }
 
 .category {
@@ -101,4 +226,10 @@ footer {
   width: 100%;
   height: 32px;
   object-fit: contain;
+}
+
+@media screen and (max-width: 1023px) {
+  .menu-list {
+    width: 100vw;
+  }
 }

@@ -14,3 +14,7 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+document.querySelector('.menu-list').addEventListener('click', event => {
+    document.querySelector('.burger-checkbox').click();
+});
