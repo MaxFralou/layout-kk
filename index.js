@@ -26,13 +26,20 @@ document.querySelector('.menu-list').addEventListener('click', event => {
     document.querySelector('.burger-checkbox').click();
 });
 
+var swiperBtn = document.querySelectorAll('.swiper-btn')
 var pagination = document.querySelector('.swiper-pagination');
 var footer = document.querySelector('.footer-title');
 
 var observer = new IntersectionObserver(function(entries) {
   if (entries[0].isIntersecting) {
+    swiperBtn.forEach(element => {
+      element.style.display = 'none'
+    });
     pagination.style.display = 'none';
   } else {
+    swiperBtn.forEach(element => {
+      element.style.display = 'block'
+    });
     pagination.style.display = 'flex';
   }
 });
