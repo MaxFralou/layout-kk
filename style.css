@@ -1,4 +1,6 @@
 @import url('./assets/css/normalize.css');
+@import url('./assets/css/offer.css');
+@import url('./assets/css/questions.css');
 
 html {
   box-sizing: border-box;
@@ -236,6 +238,7 @@ footer {
 
 .footer-title {
   color: #cccccc;
+  font-size: 14px;
 }
 
 .footer-container {
@@ -244,6 +247,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 22px;
 }
 
 .footer-list {

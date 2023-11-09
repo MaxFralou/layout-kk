@@ -32,15 +32,27 @@ var footer = document.querySelector('.footer-title');
 
 var observer = new IntersectionObserver(function(entries) {
   if (entries[0].isIntersecting) {
-    swiperBtn.forEach(element => {
-      element.style.display = 'none'
-    });
-    pagination.style.display = 'none';
+    if (swiperBtn) {
+      swiperBtn.forEach(element => {
+        if (element) {
+          element.style.display = 'none';
+        }
+      });
+    }
+    if (pagination) {
+      pagination.style.display = 'none';
+    }
   } else {
-    swiperBtn.forEach(element => {
-      element.style.display = 'block'
-    });
-    pagination.style.display = 'flex';
+    if (swiperBtn) {
+      swiperBtn.forEach(element => {
+        if (element) {
+          element.style.display = 'block';
+        }
+      });
+    }
+    if (pagination) {
+      pagination.style.display = 'flex';
+    }
   }
 });
 
