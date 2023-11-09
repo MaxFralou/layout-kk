@@ -21,6 +21,10 @@ body {
 
 :root {
   --swiper-theme-color: #b9b9b9;
+  --swiper-pagination-bottom: 44px;
+  --swiper-pagination-bullet-width: 77px;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
 }
 
 header {
@@ -46,7 +50,7 @@ header {
 
 /* BURGER */
 
-.menu {
+.burger-menu {
   padding-bottom: 18px;
 }
 
@@ -148,6 +152,12 @@ header {
   object-fit: contain;
 }
 
+.right-part {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .swiper {
   min-width: 100%;
   min-height: 100%;
@@ -183,6 +193,27 @@ header {
 
 .swiper-btn:hover {
   opacity: 1;
+}
+
+.swiper-pagination {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: baseline;
+  z-index: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  display: block;
+  font-size: 14px;
+  color: #000;
+  background: transparent;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
 }
 
 .category {
