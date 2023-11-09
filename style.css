@@ -150,11 +150,13 @@ header {
   margin: 0 0 0 22px;
   max-width: 80px;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .right-part {
   display: flex;
   align-items: center;
+  cursor: pointer;
   gap: 24px;
 }
 
