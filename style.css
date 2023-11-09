@@ -1,0 +1,272 @@
+@import url('./assets/css/normalize.css');
+@import url('./assets/css/offer.css');
+@import url('./assets/css/questions.css');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color: #333;
+}
+
+:root {
+  --swiper-theme-color: #b9b9b9;
+  --swiper-pagination-bottom: 44px;
+  --swiper-pagination-bullet-width: 77px;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+}
+
+header {
+  align-items: center;
+  position: fixed;
+  top: 22px;
+  left: 32px;
+  right: 32px;
+  z-index: 1000;
+  min-height: 50px;
+}
+
+.toollbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-part {
+  display: flex;
+  align-items: center
+}
+
+/* BURGER */
+
+.burger-menu {
+  padding-bottom: 18px;
+}
+
+.burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.burger {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  background: transparent;
+  width: 28px;
+  height: 24px;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  background: #333;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #333;
+  transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+
+.burger::after {
+  bottom: 0;
+  transition: bottom .3s .15s, transform .3s;
+}
+
+.burger-checkbox:checked+.burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+
+.burger-checkbox:checked+.burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom .3s, transform .3s .15s;
+}
+
+.menu-list {
+  top: -38px;
+  left: -32px;
+  position: absolute;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  padding: 0 32px 32px;
+  background: #fff;
+  list-style-type: none;
+  transform: translateX(-100%);
+  transition: .3s;
+  width: 20vw;
+  height: 100vh;
+}
+
+.menu-item {
+  display: block;
+  padding: 2px;
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, .2)
+}
+
+.burger-checkbox:checked~.menu-list {
+  transform: translateX(0);
+}
+
+/* BURGER */
+
+.logo {
+  z-index: 2;
+}
+
+.logo img {
+  margin: 0 0 0 22px;
+  max-width: 80px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.right-part {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 24px;
+}
+
+.swiper {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-btn {
+  position: fixed;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.swiper-btn:hover {
+  opacity: 1;
+}
+
+.swiper-pagination {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: baseline;
+  z-index: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  display: block;
+  font-size: 14px;
+  color: #000;
+  background: transparent;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+}
+
+.category {
+  display: flex;
+  margin: 22px 0 22px 0;
+  gap: 14px;
+}
+
+.category-2 {
+  display: flex;
+}
+
+footer {
+  background-color: black;
+  color: #949494;
+  font-size: 0.6rem;
+}
+
+.footer-title {
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 22px;
+}
+
+.footer-list {
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  margin: 12px;
+}
+
+.erip img {
+  width: 100%;
+  height: 32px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1023px) {
+  .menu-list {
+    width: 100vw;
+  }
+}

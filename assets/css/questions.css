@@ -1,0 +1,25 @@
+.questions-container {
+    font-size: 18px;
+    margin: 32px;
+}
+
+.questions {
+    width: 80vw;
+    min-width: 290px;
+    padding-top: 102px;
+    margin: 0 auto;
+}
+
+fieldset {    
+    border-radius: 8px;
+    margin: 22px 12px;
+}
+
+details {
+    margin: 22px;
+}
+
+.punchline {
+    font-style: italic;
+    font-size: medium;
+}
