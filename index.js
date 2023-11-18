@@ -8,7 +8,7 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
     renderBullet: function (index, className) {
-      return `<div class="${className}">${index === 0 ? 'Женщины' : index === 1 ? 'Дети' : index + 1}</div>`;
+      return `<div class="${className}">${index === 0 ? 'Взрослые' : index === 1 ? 'Дети' : index + 1}</div>`;
     },
   },
   navigation: {

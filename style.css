@@ -1,5 +1,7 @@
 @import url('./assets/css/normalize.css');
 
+@import url('./assets/css/catalog.css');
+
 html {
   box-sizing: border-box;
 }
