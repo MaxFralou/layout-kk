@@ -1,0 +1,37 @@
+    .container-card-pic-product {
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        padding: 102px 10%;
+        margin: 0 auto;
+    }
+
+    .swiper {
+        min-width: 38px !important;
+    }
+
+    .thumbs-wrapper {
+        max-width: 38px;
+        max-height: 57px;
+    }
+
+    .productSwiper {
+        max-height: 90vh;
+    }
+
+    .thumbsSwiper .swiper-slide {
+        opacity: 0.4;
+    }
+
+    .thumbsSwiper .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+
+    .swiper-slide img {
+        object-fit: contain !important;
+    }
+
+    .product {
+        max-width: 35%;
+        max-height: auto;
+    }

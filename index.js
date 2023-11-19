@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mainSwiper", {
   autoHeight: true,
   slidesPerView: 1,
   spaceBetween: 30,
@@ -17,7 +17,7 @@ var swiper = new Swiper(".mySwiper", {
   },
   on: {
     slideChange: function () {
-      document.querySelector('.mySwiper').scrollIntoView();
+      document.querySelector('.mainSwiper').scrollIntoView();
     },
   },
 });
@@ -57,3 +57,28 @@ var observer = new IntersectionObserver(function(entries) {
 });
 
 observer.observe(footer);
+
+
+//product
+
+var thumbsSwiper = new Swiper(".thumbsSwiper", {
+  loop: true,
+  direction: "vertical",
+  spaceBetween: 0,
+  slidesPerView: 10,
+  freeMode: {
+    enabled: true,
+    sticky: true,
+  },
+  watchSlidesProgress: true,  
+});
+var productSwiper = new Swiper(".productSwiper", {
+  loop: true,
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 10,
+  mousewheel: true,
+  thumbs: {
+    swiper: thumbsSwiper,
+  },
+});
