@@ -195,6 +195,7 @@ header {
   position: fixed;
   opacity: 0.5;
   transition: all 0.5s;
+  margin: 0 24px;
 }
 
 .swiper-btn:hover {
