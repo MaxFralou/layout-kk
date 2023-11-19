@@ -62,7 +62,6 @@ observer.observe(footer);
 //product
 
 var thumbsSwiper = new Swiper(".thumbsSwiper", {
-  loop: true,
   direction: "vertical",
   spaceBetween: 4,
   slidesPerView: "auto",
@@ -71,6 +70,7 @@ var thumbsSwiper = new Swiper(".thumbsSwiper", {
     sticky: true,
   },
   centeredSlides: true,
+  centeredSlidesBounds: true,
   watchSlidesProgress: true,  
 });
 var productSwiper = new Swiper(".productSwiper", {
