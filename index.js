@@ -64,12 +64,13 @@ observer.observe(footer);
 var thumbsSwiper = new Swiper(".thumbsSwiper", {
   loop: true,
   direction: "vertical",
-  spaceBetween: 0,
-  slidesPerView: 10,
+  spaceBetween: 4,
+  slidesPerView: "auto",
   freeMode: {
     enabled: true,
     sticky: true,
   },
+  centeredSlides: true,
   watchSlidesProgress: true,  
 });
 var productSwiper = new Swiper(".productSwiper", {

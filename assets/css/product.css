@@ -2,7 +2,7 @@
         width: 80vw;
         display: flex;
         justify-content: center;
-        padding: 102px 10%;
+        padding: 102px;
         margin: 0 auto;
     }
 
@@ -32,6 +32,45 @@
     }
 
     .product {
-        max-width: 35%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 50%;
         max-height: auto;
+        padding: 0 24px;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .product-title {
+        margin: 0 0 1.625em;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        line-height: 1.13;
+        font-weight: 400;
+    }
+
+    .product-price {
+        display: inline-block;
+        margin: 0 0.3125rem 1.25rem 0;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    .product-decription {
+        margin-bottom: 1.5rem;
+    }
+
+    .add-cart-btn {
+        width: 100%;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        color: #fff;
+        border: none;
+        background: #000;
+        font-size: 12px;
+        height: 2.25rem;
+        border-radius: 28px;
     }
